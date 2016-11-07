@@ -17,6 +17,7 @@ default: modules
 install: modules_install
 	cp keyvalue-blacklist.conf /etc/modprobe.d
 	cp 80-keyvalue.rules /etc/udev/rules.d
+	mkdir /usr/local/include/keyvalue/
 	cp include/*.h /usr/local/include/keyvalue/
 	update-initramfs -u
 
